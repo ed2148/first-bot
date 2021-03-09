@@ -43,6 +43,7 @@ def start(update, context):
     update.message.reply_text('Привет, выбери тему анекдота', reply_markup = reply)
     
 def school(update, context):
+    update.callback_query.answer()
     file = urllib.request.urlopen(link+"school.txt")
     x = file.read().decode(encoding='utf-8').split('\n')
     lenn = len(x)
